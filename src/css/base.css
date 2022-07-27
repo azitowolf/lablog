@@ -1,40 +1,56 @@
+@font-face {
+    font-family: 'PTSans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/PTSans-Regular.ttf');
+}
+
 /* Based on http://kevinburke.bitbucket.org/markdowncss/ */
 
 html {
-    font-size: calc(18/16 * 1rem);
+    font-size: calc(20/16 * 1rem);
 }
-
 body{
     margin: 0 auto;
-    font-family: Georgia, Palatino, serif;
+    font-family: 'PTSans', Palatino, serif;
+    font-weight: 400;
     color: #444444;
     line-height: 1;
-    max-width: 800px;
+    max-width: 700px;
     padding: 30px;
 }
 h1, h2, h3, h4 {
-    color: #111111;
     font-weight: 400;
+    font-family: Georgia, Palatino, serif;
 }
 h1, h2, h3, h4, h5, p {
     margin-bottom: 24px;
     padding: 0;
 }
-h1 {
+header h1 {
     font-size: 3rem;
 }
+header h2 {
+    color:grey;
+    font-family: 'PTSans', Palatino, serif;
+
+}
+h1 {
+    font-size: 2rem;
+}
 h2 {
-    font-size: 36px;
+    font-size: 1.5rem;
     margin: 24px 0 6px;
 }
+
 h3 {
-    font-size: 24px;
+    font-size: 1.25rem;
 }
 h4 {
-    font-size: 21px;
+    font-size: 1.1rem;
 }
 h5 {
-    font-size: 18px;
+    font-size: 1rem;
 }
 a {
     color: #0099ff;
@@ -55,13 +71,16 @@ li ul, li ul {
 p, ul, ol {
     font-size: 1rem;
     line-height: 24px;
-    max-width: 700px;
 }
 pre {
     padding: 0px 24px;
-    max-width: 700px;
+    max-width: 100%;
     white-space: pre-wrap;
-    font-size: 1.25rem;
+    font-size: 0.7rem!important;
+}
+pre[class*=language-]:before, 
+pre[class*=language-]:after {
+    box-shadow: none!important;
 }
 code {
     font-family: Consolas, Monaco, Andale Mono, monospace;
@@ -75,11 +94,9 @@ aside {
 }
 blockquote {
     margin: 1em 2em;
-    max-width: 476px;
 }
 blockquote p {
     color: #666;
-    max-width: 460px;
 }
 hr {
     width: 540px;
@@ -101,4 +118,11 @@ table thead td {
 table td {
     padding: 0.5em 1em;
     border: 1px solid #CCC;
+}
+img {
+    max-width: 100%;
+}
+
+header {
+    margin-bottom: 2em;
 }
