@@ -1,7 +1,7 @@
 ---
 title: The HTML Document Outline
 subtitle: An Essential Topic in Semantic HTML
-layout: Base.njk
+layout: base.njk
 ---
 
 The HTML "Document Outline" is fundamental to our jobs as web developers. When you create a webpage you are ultimately organizing data that will be presented to user agents (Web Browsers, RSS Feeds, Screen readers, Etc.).

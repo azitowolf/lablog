@@ -9,4 +9,6 @@ The goal is to share a bit of what I've learned with the development community.
 
 Check out the posts here:
 
-<a href="posts/how-do-jss-sitecore-basic-placeholders-work/">some post</a>
+{% for post in collections.posts %}
+- [{{post.data.title}}]({{post.url}})
+{%- endfor %}
