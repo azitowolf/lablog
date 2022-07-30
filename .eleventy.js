@@ -4,14 +4,12 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/css");
     eleventyConfig.addPassthroughCopy("src/scripts");
     eleventyConfig.addPassthroughCopy("src/fonts");
-    // eleventyConfig.addPassthroughCopy("./src/_site/scripts/prism.js");
 
     // eleventyConfig.addPlugin(syntaxHighlight);
     
     return {
         dir: {
-            input: "src",
-            output: "public"
+            input: "src"        
         }
     }
 }
