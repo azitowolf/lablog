@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>{% include "css/prism.css" %}</style>
     <link rel="stylesheet" href="/css/base.css">
-
     <title>{{title}}</title>
 </head>
+
 <body>
     <header>
         <h1>{{title}}</h1>
@@ -16,6 +16,10 @@
     </header>
     
     <main>{{content | safe}}</main>
+    
+    {# {% include "footer.njk" %} #}
+    
+    {# Scripts Section #}
     <script src="/scripts/prism.js"></script>
 </body>
 </html>

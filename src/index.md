@@ -1,13 +1,13 @@
 ---
-title: tinycode blog
-layout: "base.njk"
+title: tinycode
+layout: base.njk
 ---
 
-This is a software knowledge sharing blog by @azitowolf.
+This is a blog by @azitowolf.
 
-The goal is to share a bit of what I've learned with the development community.
+I mostly write about software, but occasionally about culture and economics as well.
 
-Check out the posts here:
+The goal is to share a bit of what I've learned.
 
 {% for post in collections.posts %}
 - [{{post.data.title}}]({{post.url}})

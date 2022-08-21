@@ -1,16 +1,17 @@
 ---
 title: The HTML Document Outline
+metatitle: tinycode | The HTML Document Outline
 subtitle: An Essential Topic in Semantic HTML
-layout: base.njk
 ---
 
-The HTML "Document Outline" is fundamental to our jobs as web developers. When you create a webpage you are ultimately organizing data that will be presented to user agents (Web Browsers, RSS Feeds, Screen readers, Etc.).
+When you create a webpage you are ultimately organizing data that will be presented to user agents (Web Browsers, RSS Feeds, Screen readers, Etc.).
+
+The document outline is a **visual/written interpretation** of how the data on your page will be understood by browsers and search engines, two of the most prolific user agents.
 
 ![image](https://miro.medium.com/max/1400/0*WzkztsMTU6VlUc77)
 > credit:https://unsplash.com/@pavan_nicola
 
-The document outline is a visual/written interpretation of how the data on your page will be understood by browsers and search engines, which make up the majority of your sites consumers.
-
+# What Does it look like? 
 It is commonly written as a tree-list of semantic topics and sub-topics that make up your content, breaking down the information into smaller and smaller chunks. For example, the wikipedia page for the Lord of the Rings has a document outline that looks like this:
 
 ```txt

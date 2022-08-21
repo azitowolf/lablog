@@ -1,3 +1,4 @@
-to do
+Source code for Alex's Public Blog
 
-TODO - style inline code blocks
+TODO: style footer content
+TODO: set the favicon + sharing url
