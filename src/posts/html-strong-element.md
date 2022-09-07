@@ -1,11 +1,12 @@
 ---
 metatitle: tinycode | The <strong> Element
-title: The <strong> Element
-subtitle: Indicate Importance using the <strong> element
+title: The `<strong>` Element
+subtitle: Indicate Importance using the `<strong>` element
 layout: base.njk
 ---
+# {{title}}
+## {{subtitle}}
 
-# The `<strong>` Element
 The `<strong>` element marks text that is econsidered important, urgent, or serious, relative to the surrounding text. The HTML Spec defines importance as being used in a heading, caption, or paragraph to distinguish the part that really matters from other parts that might be more detailed, more jovial, or merely boilerplate. In the example below, the strong element shows that the chapter text is likely less important that the actual title of the chapter.
 
 

@@ -1,7 +1,10 @@
 ---
 title: tinycode
+metatitle: tinycode
 layout: base.njk
 ---
+
+# tinycode
 
 This is a blog by @azitowolf.
 

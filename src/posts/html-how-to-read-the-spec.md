@@ -1,9 +1,12 @@
 ---
 metatitle: tinycode | How To Read the HTML Spec
 title: How To Read the HTML Spec
-subtitle: A guide for WWeb Developers
+subtitle: A guide for Web Developers
 layout: base.njk
 ---
+
+# {{title}}
+## {{subtitle}}
 
 # What is the HTML Specification
 The specification is a document that defines all of the rules of HTML, Hypertext... It defines, for example, all of the metadata that should be allowed on every page webpage on the internet. It also defines every single HTML "Tag" that can be used in the body of those webpages. It is because of this specifiction, for example, that `<dog>` does not exist as a meaningful element, while `<p>` does.

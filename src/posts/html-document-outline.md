@@ -4,6 +4,8 @@ metatitle: tinycode | The HTML Document Outline
 subtitle: An Essential Topic in Semantic HTML
 ---
 
+# {{title}}
+
 When you create a webpage you are ultimately organizing data that will be presented to user agents (Web Browsers, RSS Feeds, Screen readers, Etc.).
 
 The document outline is a **visual/written interpretation** of how the data on your page will be understood by browsers and search engines, two of the most prolific user agents.
@@ -105,4 +107,3 @@ Let's re-write the example above using sections. We can denote the content area 
 ```
 
 Creating an intelligible information hierarchy is one of the most fundamentally important topics in web development, and it's possibly the most integral pillar of semantic HTML. Spend some time reading the specification here, and check out this awesome course for more an even deeper dive.
-Thanks for reading!
