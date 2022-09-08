@@ -4,7 +4,9 @@ title: Sitecore JSS Inline Placeholders
 subtitle: How Basic Placeholders Work in React JSS
 ---
 
-# Sitecore
+# {{title}}
+## {{subtitle}}
+
 [Sitecore JSS](https://www.codehousegroup.com/insight-and-inspiration/tech-stream/sitecore-headless-and-jss-what-does-it-all-mean) is a framework for building rendering applications for the [Sitecore](https://www.sitecore.com/) Content Management System.
 
 Some CMSes that consider themselves ‘headless’ provide no framework for controlling the layout of your pages via content, but Sitecore maintains tight control over how the layout of a page comes out. The primary way that they do so is through placeholders.
@@ -84,5 +86,4 @@ export default withsitecoreContext()(BlogPage)
 
 Now, you will be able to add the two components — `BlogPageHeader` + `BlogPageContent` (not depicted here) to the presentation details for the page in question, and render them into the placeholders above.
 
-I hope that this article helps to ‘supplement’ the existing Sitecore JSS documentation so that those developers who come after me can learn a bit faster and suffer a bit less. Thanks for reading.
-
+I hope that this article helps to ‘supplement’ the existing Sitecore JSS documentation so that those developers who come after me can learn a bit faster and suffer a bit less.

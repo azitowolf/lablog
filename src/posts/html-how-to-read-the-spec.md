@@ -37,5 +37,3 @@ The section that I spend the most time in is this one: https://html.spec.whatwg.
 Once there, I usually just search for the element that I think I'll be working with, for example, `<em>` nd then navigate to that section of the spec. 
 
 After that I take some time to read about the elements inteded purpose (because often this is actually very diggerent from how it is used on the web) and then its content model and any attributes taht it mibht have that could be useful. For more interactive elements that mave many complex attributes, like the `<audio>` element, I will ususally go to MDN for more information because theie structure is easier to understand.
-
-> Thanks for reading, and happy wrtting

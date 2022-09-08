@@ -43,5 +43,3 @@ The `<kbd>` element takes the “translate” attribute, which tells user agents
 ## Categories
 
 The `<kbd>` element is primarily phrasing content, though it also falls into “flow” and “palpable” categories with most other elements. This means that it is most likely used inside of a `<p>` element as part of a paragraph of text.
-
-Thanks for reading, and taking a step towards becoming a better HTML author.
