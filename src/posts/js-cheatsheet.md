@@ -1,3 +1,12 @@
+---
+title: The JS Cheatsheet
+metatitle: tinycode | The JS Cheatsheet
+subtitle: For the Professional Web Developer
+---
+
+# {{title}}
+# {{subtitle}}
+
 1. Scroll to the top/bottom of the page
 We can use window.scrollTo() to scroll smoothly to the top of the page.
 

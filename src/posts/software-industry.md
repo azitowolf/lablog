@@ -1,3 +1,13 @@
+---
+title: The Software Industry is Shrinking
+metatitle: tinycode | The Software Industry is Shrinking
+subtitle: It's time to specialize
+---
+
+# {{title}}
+# {{subtitle}}
+
+
 Are you a software developer in 2020? It's time to Specialize.
 
 The software industry is in decline. The last 30 years from the dot com boom to now have produced a huge wave of innovation across so many sectors, leaving healthcare, shopping, food, communications along with countless others completely transformed. 

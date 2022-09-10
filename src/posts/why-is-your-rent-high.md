@@ -1,3 +1,12 @@
+---
+title: Why Your Rent is So Damn High
+metatitle: tinycode | Why Your Rent is So Damn High
+subtitle: It's because corporations don't care about you
+---
+
+# {{title}}
+# {{subtitle}}
+
 Lately, everyone I know is talking about their rent.   
 
 I’m sure that everyone has been bitching about their rent since the beginning of modern life, but this time it is different. National rent climbed above 2,000 dollars on average for the first time in US history https://www.deseret.com/u-s-world/2022/6/15/23169909/housing-market-rent-prices-national-median-over-2000-expensive-demand-redfin last July. Asking rents in the second quarter of 2022 were 23% higher nationwide compared to the same period in 2019, according to Census data released earlier this month.

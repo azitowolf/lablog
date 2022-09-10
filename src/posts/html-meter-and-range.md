@@ -1,5 +1,12 @@
+---
+metatitle: tinycode | The <meter> and <range> Elements
+title: The `<meter>` and `<range>` Elements
+subtitle: Describe Ranges using the The `<meter>` and `<range>` Elements
+layout: base.njk
+---
 
-# Describe Ranges of Values with the `Meter` Elements.
+# {{title}}
+## {{subtitle}}
 
 The [meter element](https://html.spec.whatwg.org/#the-meter-element) is used to markup a value that falls within a range, and has an optimum value. 
 

@@ -1,3 +1,11 @@
+---
+title: The Ultimate HTML Cheatsheet
+metatitle: tinycode | The Ultimate HTML Cheatsheet
+subtitle: For the Professional Web Developer
+---
+
+# {{title}}
+## {{subtitle}}
 
 1. Headers
 Headers are used to indicate the information hierarchy of a page. There should only be one h1
