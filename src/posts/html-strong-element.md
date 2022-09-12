@@ -2,7 +2,7 @@
 metatitle: tinycode | The <strong> Element
 title: The `<strong>` Element
 subtitle: Indicate Importance using the `<strong>` element
-layout: base.njk
+categories: ["HTML", "Shortform"]
 ---
 # {{title}}
 ## {{subtitle}}

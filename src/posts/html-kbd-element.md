@@ -2,7 +2,7 @@
 title: The `<kbd>` Element
 subtitle: For Emphasizing Written Content
 metatitle: tinycode | The <kbd> Element
-layout: base.njk
+categories: ["HTML", "Shortform"]
 ---
 
 # {{title}}

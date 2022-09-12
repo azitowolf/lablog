@@ -2,6 +2,7 @@
 metatitle: tinycode | How Do JSS Basic Placeholders Work?
 title: Sitecore JSS Inline Placeholders
 subtitle: How Basic Placeholders Work in React JSS
+categories: ["Sitecore", "JSS", "Shortform"]
 ---
 
 # {{title}}

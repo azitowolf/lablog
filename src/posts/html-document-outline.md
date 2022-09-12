@@ -2,6 +2,7 @@
 title: The HTML Document Outline
 metatitle: tinycode | The HTML Document Outline
 subtitle: An Essential Topic in Semantic HTML
+categories: ["HTML", "Longform"]
 ---
 
 # {{title}}

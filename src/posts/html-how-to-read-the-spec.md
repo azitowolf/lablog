@@ -2,7 +2,7 @@
 metatitle: tinycode | How To Read the HTML Spec
 title: How To Read the HTML Spec
 subtitle: A guide for Web Developers
-layout: base.njk
+categories: ["HTML", "Longform"]
 ---
 
 # {{title}}

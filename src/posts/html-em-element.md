@@ -2,7 +2,7 @@
 metatitle: tinycode | The <em> Element
 title: The `<em>` Element
 subtitle: Emphasize Written content using the `<em>` element
-layout: base.njk
+categories: ["HTML", "Shortform"]
 ---
 
 # The `<em>` Element
