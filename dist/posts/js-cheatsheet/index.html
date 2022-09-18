@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>/* PrismJS 1.28.0
+https://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+javascript+aspnet+csharp+cshtml+jsx+tsx+scss+typescript */
+code[class*=language-],pre[class*=language-]{color:#000;background:0 0;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{position:relative;margin:.5em 0;overflow:visible;padding:1px}pre[class*=language-]>code{position:relative;z-index:1;border-left:10px solid #358ccb;box-shadow:-1px 0 0 0 #358ccb,0 0 0 1px #dfdfdf;background-color:#fdfdfd;background-image:linear-gradient(transparent 50%,rgba(69,142,209,.04) 50%);background-size:3em 3em;background-origin:content-box;background-attachment:local}code[class*=language-]{max-height:inherit;height:inherit;padding:0 1em;display:block;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdfdfd;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin-bottom:1em}:not(pre)>code[class*=language-]{position:relative;padding:.2em;border-radius:.3em;color:#c92c2c;border:1px solid rgba(0,0,0,.1);display:inline;white-space:normal}pre[class*=language-]:after,pre[class*=language-]:before{content:'';display:block;position:absolute;bottom:.75em;left:.18em;width:40%;height:20%;max-height:13em;box-shadow:0 13px 8px #979797;-webkit-transform:rotate(-2deg);-moz-transform:rotate(-2deg);-ms-transform:rotate(-2deg);-o-transform:rotate(-2deg);transform:rotate(-2deg)}pre[class*=language-]:after{right:.75em;left:auto;-webkit-transform:rotate(2deg);-moz-transform:rotate(2deg);-ms-transform:rotate(2deg);-o-transform:rotate(2deg);transform:rotate(2deg)}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#7d8b99}.token.punctuation{color:#5f6364}.token.boolean,.token.constant,.token.deleted,.token.function-name,.token.number,.token.property,.token.symbol,.token.tag{color:#c92c2c}.token.attr-name,.token.builtin,.token.char,.token.function,.token.inserted,.token.selector,.token.string{color:#2f9c0a}.token.entity,.token.operator,.token.url,.token.variable{color:#a67f59;background:rgba(255,255,255,.5)}.token.atrule,.token.attr-value,.token.class-name,.token.keyword{color:#1990b8}.token.important,.token.regex{color:#e90}.language-css .token.string,.style .token.string{color:#a67f59;background:rgba(255,255,255,.5)}.token.important{font-weight:400}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.namespace{opacity:.7}@media screen and (max-width:767px){pre[class*=language-]:after,pre[class*=language-]:before{bottom:14px;box-shadow:none}}pre[class*=language-].line-numbers.line-numbers{padding-left:0}pre[class*=language-].line-numbers.line-numbers code{padding-left:3.8em}pre[class*=language-].line-numbers.line-numbers .line-numbers-rows{left:0}pre[class*=language-][data-line]{padding-top:0;padding-bottom:0;padding-left:0}pre[data-line] code{position:relative;padding-left:4em}pre .line-highlight{margin-top:0}
+</style>
+    <link rel="stylesheet" href="/css/base.css">
+    <title>tinycode | The JS Cheatsheet</title>
+</head>
+
+<body>
+    
+    <main>
+        <h1>The JS Cheatsheet</h1>
+<h1>For the Professional Web Developer</h1>
+<ol>
+<li>Scroll to the top/bottom of the page
+We can use window.scrollTo() to scroll smoothly to the top of the page.</li>
+</ol>
+<pre><code class="language-js">const scrollToTop = () =&gt; {
+  window.scrollTo({ top: 0, left: 0, behavior: &quot;smooth&quot; });
+};
+</code></pre>
+<ol start="2">
+<li>Scroll elements to the visible area
+Sometimes we need to scroll elements to the visible area, what should we do? Using scrollIntoView is enough.</li>
+</ol>
+<pre><code class="language-js">const smoothScroll = (element) =&gt; {
+  element.scrollIntoView({
+    behavior: &quot;smooth&quot;,
+  });
+};
+</code></pre>
+<ol start="4">
+<li>Display the element in fullscreen mode
+You must have encountered such a scenario, where you need to play the video in full screen and open the page in full screen in the browser.</li>
+</ol>
+<pre><code class="language-js">const goToFullScreen = (element) =&gt; {
+  element = element || document.body;
+  if (element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if (element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();
+  } else if (element.msRequestFullscreen) {
+    element.msRequestFullscreen();
+  } else if (element.webkitRequestFullscreen) {
+    element.webkitRequestFullScreen();
+  }
+};
+</code></pre>
+<ol start="5">
+<li>Exit browser full-screen state
+Yes, this is used with the fourth point, you will also have the scenario of exiting the full-screen state of the browser.</li>
+</ol>
+<pre><code class="language-js">const goExitFullscreen = () =&gt; {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.msExitFullscreen) {
+    document.msExitFullscreen();
+  } else if (document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  }
+};
+</code></pre>
+<ol start="6">
+<li>Get the type of data
+How to get the data type of a variable by a function?</li>
+</ol>
+<pre><code class="language-js">const getType = (value) =&gt; {
+  const match = Object.prototype.toString.call(value).match(/ (\w+)]/)
+  return match[1].toLocaleLowerCase()
+}
+
+getType() // undefined
+getType({}}) // object
+getType([]) // array
+getType(1) // number
+getType('fatfish') // string
+getType(true) // boolean
+getType(/fatfish/) // regexp
+</code></pre>
+<ol start="6">
+<li>Stop bubbling events
+A method for preventing event bubbling that works on all platforms is necessary.</li>
+</ol>
+<pre><code class="language-js">const stopPropagation = (event) =&gt; {
+  event = event || window.event;
+  if (event.stopPropagation) {
+    event.stopPropagation();
+  } else {
+    event.cancelBubble = true;
+  }
+};
+</code></pre>
+<ol start="7">
+<li>Deep copy an object
+How do you copy a deeply nested object?</li>
+</ol>
+<pre><code class="language-js">
+</code></pre>
+<ol start="8">
+<li>Determining the type of device
+We often have to do this to show A logic on the phone and B logic on the PC. Basically, the device type is determined by recognizing the userAgent of the browser.</li>
+</ol>
+<pre><code class="language-js">
+const isMobile = () =&gt; {
+  return !!navigator.userAgent.match(
+    /(iPhone|iPod|Android|ios|iOS|iPad|Backerry|WebOS|Symbian|Windows Phone|Phone)/i
+  );
+};
+</code></pre>
+<ol start="9">
+<li>Determine if the device is Android or IOS
+In addition to distinguishing whether it is mobile or PC, many times we also need to distinguish whether the current device is Android or IOS.</li>
+</ol>
+<pre><code class="language-js">const isAndroid = () =&gt; {
+  return /android/i.test(navigator.userAgent.toLowerCase());
+};
+
+const isIOS = () =&gt; {
+  let reg = /iPhone|iPad|iPod|iOS|Macintosh/i;
+  return reg.test(navigator.userAgent.toLowerCase());
+};
+</code></pre>
+<ol start="10">
+<li>Get the type of browser and its version
+As a front-end developer, you may encounter various compatibility issues. At this time, you may need to obtain the type and version of the browser.</li>
+</ol>
+<pre><code class="language-js">const isAndroid = () =&gt; {
+  return /android/i.test(navigator.userAgent.toLowerCase());
+};
+
+const isIOS = () =&gt; {
+  let reg = /iPhone|iPad|iPod|iOS|Macintosh/i;
+  return reg.test(navigator.userAgent.toLowerCase());
+};
+</code></pre>
+<ol start="11">
+<li>Set cookies
+The cookie is probably the worst API I’ve ever seen, it’s so hard to use that we had to re-encapsulate it to maximize our development efficiency.</li>
+</ol>
+<pre><code class="language-js">const setCookie = (key, value, expire) =&gt; {
+  const d = new Date();
+  d.setDate(d.getDate() + expire);
+  document.cookie = `${key}=${value};expires=${d.toUTCString()}`;
+};
+</code></pre>
+<ol start="12">
+<li>Get cookies
+In addition to writing to the cookie, we will also be involved in its read operation.</li>
+</ol>
+<pre><code class="language-js">const getCookie = (key) =&gt; {
+  const cookieStr = unescape(document.cookie);
+  const arr = cookieStr.split(&quot;; &quot;);
+  let cookieValue = &quot;&quot;;
+  for (let i = 0; i &lt; arr.length; i++) {
+    const temp = arr[i].split(&quot;=&quot;);
+    if (temp[0] === key) {
+      cookieValue = temp[1];
+      break;
+    }
+  }
+  return cookieValue;
+};
+</code></pre>
+<ol start="13">
+<li>Delete cookies
+What is the idea of deleting a cookie? Actually, just set its expiration time to this moment and it will expire immediately.</li>
+</ol>
+<pre><code class="language-js">const getCookie = (key) =&gt; {
+  const cookieStr = unescape(document.cookie);
+  const arr = cookieStr.split(&quot;; &quot;);
+  let cookieValue = &quot;&quot;;
+  for (let i = 0; i &lt; arr.length; i++) {
+    const temp = arr[i].split(&quot;=&quot;);
+    if (temp[0] === key) {
+      cookieValue = temp[1];
+      break;
+    }
+  }
+  return cookieValue;
+};
+</code></pre>
+<ol start="14">
+<li>Generate a random string
+I don’t know if you have ever encountered a scenario where you need to generate a random string. I have encountered it many times, and every time I have to google it again until I learn this tool function.</li>
+</ol>
+<pre><code class="language-js">const randomString = (len) =&gt; {
+  let chars = &quot;ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz123456789&quot;;
+  let strLen = chars.length;
+  let randomStr = &quot;&quot;;
+  for (let i = 0; i &lt; len; i++) {
+    randomStr += chars.charAt(Math.floor(Math.random() * strLen));
+  }
+  return randomStr;
+};
+
+randomString(10) // pfkMfjEJ6x
+randomString(20) // ce6tEx1km4idRNMtym2S
+</code></pre>
+<ol start="15">
+<li>Capitalize the first letter of the string</li>
+</ol>
+<pre><code class="language-js">const fistLetterUpper = (str) =&gt; {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
+fistLetterUpper('fatfish') // Fatfish
+</code></pre>
+<ol start="16">
+<li>Generate random numbers in a specified range
+Maybe for testing purposes, I often need to generate random numbers within a certain range.</li>
+</ol>
+<pre><code class="language-js">const randomNum = (min, max) =&gt; Math.floor(Math.random() * (max - min + 1)) + min;
+
+randomNum(1, 10) // 6
+randomNum(10, 20) // 11
+</code></pre>
+<ol start="17">
+<li>Shuffle the order of an array
+How to shuffle the original order of the array?</li>
+</ol>
+<pre><code class="language-js">const shuffleArray = (array) =&gt; {
+  return array.sort(() =&gt; 0.5 - Math.random())
+}
+
+let arr = [ 1, -1, 10, 5 ]
+
+shuffleArray(arr) // [5, -1, 10, 1]
+shuffleArray(arr) // [1, 10, -1, 5]
+</code></pre>
+<ol start="18">
+<li>Get a random value from an array
+I have done a lottery project before, and I need to make the prizes in the array appear randomly.</li>
+</ol>
+<pre><code class="language-js">const getRandomValue = array =&gt; array[Math.floor(Math.random() * array.length)]; 
+const prizes = [  '$100', '🍫', '🍔' ]
+
+getRandomValue(prizes) // 🍫
+getRandomValue(prizes) // 🍔
+getRandomValue(prizes) // 🍫
+</code></pre>
+<ol start="19">
+<li>The first way to format money
+Sourced from here.</li>
+</ol>
+<pre><code class="language-js">const formatMoney = (money) =&gt; {
+  return money.replace(new RegExp(`(?!^)(?=(\\d{3})+${money.includes('.') ? '\\.' : '$'})`, 'g'), ',')  
+}
+
+formatMoney('123456789') // '123,456,789'
+formatMoney('123456789.123') // '123,456,789.123'
+formatMoney('123') // '123'
+</code></pre>
+<p>There are many ways to format money, such as these two ways.</p>
+<ol start="20">
+<li>The second way to format money
+Sourced from here.</li>
+</ol>
+<pre><code class="language-js">const formatMoney = (money) =&gt; {
+  return money.toLocaleString()
+}
+
+formatMoney(123456789) // '123,456,789'
+formatMoney(123456789.123) // '123,456,789.123'
+formatMoney(123) // '123'
+</code></pre>
+<p>Regular expressions give us too much headache, don’t they? So we need to find an easier way to format money.</p>
+
+        
+            <i>Thanks For Reading,</i>
+</br>
+<i>And for taking a step toward becoming a better HTML Author</i>
+        
+    </main>
+    
+    
+    <script src="/scripts/prism.js"></script>
+</body>
+</html>
