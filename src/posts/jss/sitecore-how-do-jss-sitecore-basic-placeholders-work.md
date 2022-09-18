@@ -1,5 +1,5 @@
 ---
-metatitle: tinycode | How Do JSS Basic Placeholders Work?
+metatitle: tinycode | Sitecore JSS Inline Placeholders
 title: Sitecore JSS Inline Placeholders
 subtitle: How Basic Placeholders Work in React JSS
 ---
