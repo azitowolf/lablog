@@ -2,6 +2,7 @@
 title: Send Data Across the Network with the Form Element
 metatitle: tinycode | The HTML Form Element
 subtitle: For the Professional Web Developer
+categories: ["HTML", "Longform"]
 ---
 
 # {{title}}

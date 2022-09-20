@@ -4,22 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {# <style>{% include "css/prism.css" %}</style> #}
+    
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/prism.css">
-    <title>{{metatitle}}</title>
+    <title></title>
 </head>
 
 <body>
     
     <main>
-        {{content | safe}}
-        {% if signoff %}
-            {% include "./signoff.md" %}
-        {% endif  %}
+        <h1>Cheat Sheets</h1>
+<ul>
+<li>
+<p><a href="/posts/cheat-sheets/html-cheatsheet/">The Ultimate HTML Cheatsheet</a> <span class="category-tag">HTML</span><span class="category-tag">Cheatsheet</span></p>
+</li>
+<li>
+<p><a href="/posts/cheat-sheets/html-cheatsheet-list/">Lists | HTML CheatSheet</a></p>
+</li>
+</ul>
+
+        
     </main>
     
-    {# Scripts Section #}
+    
     <script type="text/javascript" src="/scripts/appInsights.js"></script>
     <script type="text/javascript" src="/scripts/prism.js"></script>
 </body>

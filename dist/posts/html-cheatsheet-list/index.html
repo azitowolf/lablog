@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <title>tinycode | The Ultimate HTML Cheatsheet | Lists</title>
+</head>
+
+<body>
+    
+    <main>
+        <h1>Lists | HTML CheatSheet</h1>
+<h2></h2>
+<h2>Types of Lists in HTML</h2>
+<ol>
+<li>Ordered Lists (<code>&lt;ol&gt;</code>)</li>
+<li>Unordered Lists (<code>&lt;ul&gt;</code>)</li>
+<li>Description Lists (<code>&lt;dl&gt;</code>)</li>
+</ol>
+<h2>Ordered Lists (<code>&lt;ol&gt;</code>)</h2>
+<p>Ordered lists are defined with the <code>&lt;ol&gt;</code> tag. They represent list content in which order matters. An example might be a list of cooking steps in a recipe, or a list of directions in a map application.</p>
+<h2>Examples</h2>
+<pre><code class="language-html">&lt;h2&gt;Cake Directions&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Turn on oven at 350 degrees&lt;/li&gt;    
+  &lt;li&gt;Mix Batter&lt;/li&gt;    
+  &lt;li&gt;Pour into tray&lt;/li&gt;    
+  &lt;li&gt;Bake for 45 minutes&lt;/li&gt;    
+&lt;ol&gt;
+
+&lt;h2&gt;Grocery To Home&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Turn right on Main St.&lt;/li&gt;
+  &lt;li&gt;Drive 2 miles&lt;/li&gt;
+  &lt;li&gt;Turn left on Reginald St.&lt;/li&gt;
+  &lt;li&gt;After 500 feet, your destination will be on the left&lt;/li&gt;
+&lt;/ol&gt;  
+</code></pre>
+<p>Default Styles:</p>
+<p><img src="/img/2022-09-19-21-49-29.png" alt="ordered list styles"></p>
+<h2>Attributes</h2>
+<ol>
+<li><code>type</code>: this attribute allows you to change the numberinng type (the default is numbers, 1, 2, 3, etc...)</li>
+<li><code>start</code>: this attribute allows you to change the start number, if you pass a 4 to the element then the list will start at 4.</li>
+<li><code>reverse</code>: this will reverse the numbering.</li>
+</ol>
+<h2>Unordered Lists (<code>&lt;ul&gt;</code>)</h2>
+<p>Unordered lists are defined with the <code>&lt;ul&gt;</code> tag. They represent list content in which order does not matter. A example might be a packing list, or a list of skills on a resume. Any content in which the grouping of the content within is important, but the order is not.</p>
+<h2>Examples</h2>
+<pre><code class="language-html">  &lt;h2&gt;Packing List&lt;/h2&gt;
+  &lt;ul&gt;
+      &lt;li&gt;Shoes&lt;/li&gt;    
+      &lt;li&gt;Sunglasses&lt;/li&gt;    
+      &lt;li&gt;Underwear&lt;/li&gt;    
+      &lt;li&gt;Socks&lt;/li&gt;    
+  &lt;/ul&gt;
+
+  &lt;h2&gt;Business Ideas&lt;/h2&gt;
+  &lt;ul&gt;
+      &lt;li&gt;Dog sweater business&lt;/li&gt;    
+      &lt;li&gt;Subscription origami service&lt;/li&gt;    
+      &lt;li&gt;Solar Power&lt;/li&gt;
+      &lt;ul&gt;
+          &lt;li&gt;Solar-powered shoes&lt;/li&gt;    
+          &lt;li&gt;Solar-powered bicycles&lt;/li&gt; 
+      &lt;/ul&gt;
+      &lt;li&gt;Socks with baby-yoda pattern&lt;/li&gt;    
+  &lt;/ul&gt;
+
+</code></pre>
+<p>Default Styles:</p>
+<p><img src="/img/XXXXX.png" alt="unordered list"></p>
+<h2>Attributes</h2>
+<ol>
+<li><code>type</code>: this attribute allows you to change the numberinng type (the default is round bullets,as shown above)</li>
+</ol>
+<h2>Description Lists (<code>&lt;dl&gt;</code>)</h2>
+<p>Description lists are defined with the <code>&lt;dl&gt;</code> tag. They represent list content in which there is a list of definitions or descriptions.</p>
+<h2>Use Cases</h2>
+<p>An iconic example might be a dictionary, with a list of terms and their definitions listed in order. Another example could be a data list, where you are listing the statistics for a character in a game.</p>
+<h2>Examples</h2>
+<pre><code class="language-html">&lt;h2&gt;dictionary&lt;/h2&gt;
+&lt;dl&gt;
+  &lt;dt&gt;Boat&lt;/dt&gt;
+  &lt;dd&gt;a small vessel propelled on water by oars, sails, or an engine.&lt;/dd&gt;  
+  &lt;dt&gt;Tree&lt;/dt&gt;
+  &lt;dd&gt;a woody perennial plant, typically having a single stem or trunk growing to a considerable height and bearing lateral branches at some distance from the ground.&lt;/dd&gt;  
+  &lt;dt&gt;Dinosaur&lt;/dt&gt;
+  &lt;dd&gt;a fossil reptile of the Mesozoic era, in many species reaching an enormous size.&lt;/dd&gt;    
+&lt;/dl&gt;
+&lt;h2&gt;Bulbasaur&lt;/h2&gt;
+&lt;dl&gt;
+  &lt;dt&gt;Health&lt;/dt&gt;    
+  &lt;dd&gt;14&lt;/dd&gt;  
+  &lt;dt&gt;Damage&lt;/dt&gt;    
+  &lt;dd&gt;2&lt;/dd&gt;  
+  &lt;dt&gt;Speed&lt;/dt&gt;    
+  &lt;dd&gt;8&lt;/dd&gt;
+  &lt;dt&gt;Abilities&lt;/dt&gt;
+    &lt;dd&gt;
+      &lt;ul&gt;
+        &lt;li&gt;vine whip&lt;/li&gt;
+        &lt;li&gt;tackle&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;dd&gt;      
+&lt;/dl&gt;
+</code></pre>
+<p>Default Styles:</p>
+<p><img src="/img/2022-09-19-22-04-48.png" alt="description list"></p>
+<h2>Attributes</h2>
+<p>None. This element only contains the global HTML attributes.</p>
+<h2>Other Information</h2>
+<p>The <code>&lt;dt&gt;</code> element defines a &quot;term&quot; or &quot;key&quot; for the item in the list, and the <code>&lt;dd&gt;</code> is the &quot;definition&quot; or &quot;value&quot; for that item.</p>
+<p>The <code>&lt;dd&gt;</code> does not need to contain simple text but could contain another list, or other content like an image.</p>
+<p>The <code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code> elements do not need to be paired one-to-one, meaning you could have a term that has several definitions, or a definition that has many terms.</p>
+
+        
+            <i>Thanks For Reading,</i>
+</br>
+<i>And for taking a step toward becoming a better HTML Author</i>
+        
+    </main>
+    
+    
+    <script type="text/javascript" src="/scripts/appInsights.js"></script>
+    <script type="text/javascript" src="/scripts/prism.js"></script>
+</body>
+</html>

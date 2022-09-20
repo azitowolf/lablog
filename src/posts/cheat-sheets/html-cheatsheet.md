@@ -2,6 +2,7 @@
 title: The Ultimate HTML Cheatsheet
 metatitle: tinycode | The Ultimate HTML Cheatsheet
 subtitle: For the Professional Web Developer
+categories: ["HTML", "Cheatsheet"]
 ---
 
 # {{title}}
@@ -25,7 +26,10 @@ Headers are used to indicate the information hierarchy of a page. There should o
 ```
 
 2. List Types
-These are the ways you should know to  
+There are 3 types of lists:
+1. Ordered Lists (`<ol>`)
+2. Unordered Lists (`<ul>`)
+3. Description Lists (`<dl>`) 
 
 ```html
 
@@ -73,4 +77,4 @@ These are the ways you should know to
 
 ```
 
-3. 
+3. To Be Continued... 

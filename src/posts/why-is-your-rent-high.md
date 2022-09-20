@@ -1,7 +1,8 @@
 ---
 title: Why Your Rent is So Damn High
 metatitle: tinycode | Why Your Rent is So Damn High
-subtitle: It's because corporations don't care about you
+subtitle: It's because corporations own all the houses
+hidden: true
 ---
 
 # {{title}}

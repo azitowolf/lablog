@@ -1,4 +1,9 @@
-
+---
+title: WTF is an HTMLElementCollection?
+metatitle: tinycode | WTF is an HTMLElementCollection?
+subtitle: And why does it matter
+categories: ["JS", "Longform"]
+---
 
 # {{title}}
 ## {{subtitle}}

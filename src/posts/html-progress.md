@@ -1,6 +1,6 @@
 ---
-metatitle: tinycode | The <meter> Element
-title: The `<meter>` Element
+metatitle: tinycode | The <progress> Element
+title: The `<progress>` Element
 subtitle: Describe Ranges using the The `<meter>` Element
 layout: base.njk
 ---

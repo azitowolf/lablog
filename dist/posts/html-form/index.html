@@ -4,19 +4,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>/* PrismJS 1.28.0
-https://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+javascript+aspnet+csharp+cshtml+jsx+tsx+scss+typescript */
-code[class*=language-],pre[class*=language-]{color:#000;background:0 0;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{position:relative;margin:.5em 0;overflow:visible;padding:1px}pre[class*=language-]>code{position:relative;z-index:1;border-left:10px solid #358ccb;box-shadow:-1px 0 0 0 #358ccb,0 0 0 1px #dfdfdf;background-color:#fdfdfd;background-image:linear-gradient(transparent 50%,rgba(69,142,209,.04) 50%);background-size:3em 3em;background-origin:content-box;background-attachment:local}code[class*=language-]{max-height:inherit;height:inherit;padding:0 1em;display:block;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdfdfd;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin-bottom:1em}:not(pre)>code[class*=language-]{position:relative;padding:.2em;border-radius:.3em;color:#c92c2c;border:1px solid rgba(0,0,0,.1);display:inline;white-space:normal}pre[class*=language-]:after,pre[class*=language-]:before{content:'';display:block;position:absolute;bottom:.75em;left:.18em;width:40%;height:20%;max-height:13em;box-shadow:0 13px 8px #979797;-webkit-transform:rotate(-2deg);-moz-transform:rotate(-2deg);-ms-transform:rotate(-2deg);-o-transform:rotate(-2deg);transform:rotate(-2deg)}pre[class*=language-]:after{right:.75em;left:auto;-webkit-transform:rotate(2deg);-moz-transform:rotate(2deg);-ms-transform:rotate(2deg);-o-transform:rotate(2deg);transform:rotate(2deg)}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#7d8b99}.token.punctuation{color:#5f6364}.token.boolean,.token.constant,.token.deleted,.token.function-name,.token.number,.token.property,.token.symbol,.token.tag{color:#c92c2c}.token.attr-name,.token.builtin,.token.char,.token.function,.token.inserted,.token.selector,.token.string{color:#2f9c0a}.token.entity,.token.operator,.token.url,.token.variable{color:#a67f59;background:rgba(255,255,255,.5)}.token.atrule,.token.attr-value,.token.class-name,.token.keyword{color:#1990b8}.token.important,.token.regex{color:#e90}.language-css .token.string,.style .token.string{color:#a67f59;background:rgba(255,255,255,.5)}.token.important{font-weight:400}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.namespace{opacity:.7}@media screen and (max-width:767px){pre[class*=language-]:after,pre[class*=language-]:before{bottom:14px;box-shadow:none}}pre[class*=language-].line-numbers.line-numbers{padding-left:0}pre[class*=language-].line-numbers.line-numbers code{padding-left:3.8em}pre[class*=language-].line-numbers.line-numbers .line-numbers-rows{left:0}pre[class*=language-][data-line]{padding-top:0;padding-bottom:0;padding-left:0}pre[data-line] code{position:relative;padding-left:4em}pre .line-highlight{margin-top:0}
-</style>
+    
     <link rel="stylesheet" href="/css/base.css">
-    <title>tinycode | The JS Form Object in Javascript</title>
+    <link rel="stylesheet" href="/css/prism.css">
+    <title>tinycode | The HTML Form Element</title>
 </head>
 
 <body>
     
     <main>
-        <h1>Take Your Skills to the next level With The Form Object in Javascript</h1>
+        <h1>Send Data Across the Network with the Form Element</h1>
 <h1>For the Professional Web Developer</h1>
+<p>The HTML Form is a very important element in your job at a web developer. Fundamentally, it is the primary tool that you'll have to send data from a web page to a server. A very simple form might look like this</p>
+<pre><code class="language-html">&lt;form&gt;
+  &lt;input type=&quot;text&quot; /&gt;
+  &lt;button action=&quot;submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<p>The form element provides a couple key functions for you when sending</p>
+<ol>
+<li>It keeps a reference to every input element contained inside it</li>
+<li>It groups this content separately from any other form content on the page</li>
+<li>It contains the browser interface for sending data across the internet</li>
+</ol>
+<p>is a very opinionated wrapper for input elements.</p>
+<p>Nowadays, many frameworks wrap this element with &quot;convenient&quot; abstractions, but the better you understtand the fundsamentals of the element, the better you will be able to decide for yourself if the abstraction provided for you is the simplest or best option.</p>
+<p>For example, React.js offers the following example for working with forms:</p>
+<p>https://reactjs.org/docs/forms.html</p>
+<pre><code class="language-jsx">class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      &lt;form onSubmit={this.handleSubmit}&gt;
+        &lt;label&gt;
+          Name:
+          &lt;input type=&quot;text&quot; value={this.state.value} onChange={this.handleChange} /&gt;
+        &lt;/label&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+      &lt;/form&gt;
+    );
+  }
+}
+</code></pre>
+<pre><code class="language-html">
+  &lt;body&gt;
+    &lt;form action=&quot;test.com&quot; method=&quot;post&quot;&gt;
+      &lt;p&gt;
+        &lt;label&gt;First name: &lt;input type=&quot;text&quot; name=&quot;firstname&quot; /&gt;&lt;/label&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        &lt;label&gt;Last name: &lt;input type=&quot;text&quot; name=&quot;lastname&quot; /&gt;&lt;/label&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        &lt;label&gt;&lt;input type=&quot;password&quot; name=&quot;pwd&quot; /&gt;&lt;/label&gt;
+      &lt;/p&gt;
+
+      &lt;fieldset name=&quot;petfieldset&quot;&gt;
+        &lt;legend&gt;Pet preference&lt;/legend&gt;
+
+        &lt;p&gt;
+          &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;pet&quot; value=&quot;cat&quot; /&gt; Cat&lt;/label&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+          &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;pet&quot; value=&quot;dog&quot; /&gt; Dog&lt;/label&gt;
+        &lt;/p&gt;
+      &lt;/fieldset&gt;
+
+      &lt;fieldset&gt;
+        &lt;legend&gt;Owned vehicles&lt;/legend&gt;
+
+        &lt;p&gt;
+          &lt;label
+            &gt;&lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;Bike&quot; /&gt;I have a
+            bike&lt;/label
+          &gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+          &lt;label
+            &gt;&lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;Car&quot; /&gt;I have a
+            car&lt;/label
+          &gt;
+        &lt;/p&gt;
+      &lt;/fieldset&gt;
+
+      &lt;p&gt;&lt;button role=&quot;submit&quot;&gt;Submit&lt;/button&gt;&lt;/p&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+</code></pre>
 
         
             <i>Thanks For Reading,</i>
@@ -26,6 +116,7 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;font-fami
     </main>
     
     
-    <script src="/scripts/prism.js"></script>
+    <script type="text/javascript" src="/scripts/appInsights.js"></script>
+    <script type="text/javascript" src="/scripts/prism.js"></script>
 </body>
 </html>

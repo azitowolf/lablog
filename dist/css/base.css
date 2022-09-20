@@ -24,7 +24,7 @@ h1, h2, h3, h4 {
     font-family: Georgia, Palatino, serif;
 }
 h1, h2, h3, h4, h5, p {
-    margin-bottom: 24px;
+    margin-bottom: 1rem;
     padding: 0;
 }
 main h1:first-child {
@@ -39,7 +39,7 @@ h1 + h2 {
 }
 h2 {
     font-size: 1.5rem;
-    margin: 24px 0 6px;
+    margin-top: 2rem;
 }
 h3 {
     font-size: 1.25rem;
@@ -59,6 +59,7 @@ a {
 ul, ol {
     padding: 0;
     margin: 0;
+    padding-inline-start: 1rem;
 }
 li {
     line-height: 2rem;
@@ -82,6 +83,7 @@ pre[class*=language-]:after {
 }
 code {
     font-family: Consolas, Monaco, Andale Mono, monospace;
+    margin-top: 1rem;
     line-height: 1.5;
     font-size: 0.75em;
     background: #eee;
@@ -121,6 +123,7 @@ table td {
     border: 1px solid #CCC;
 }
 img {
+    border: 2px solid #353839;
     max-width: 100%;
 }
 

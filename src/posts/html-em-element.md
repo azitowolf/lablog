@@ -1,11 +1,15 @@
 ---
 metatitle: tinycode | The <em> Element
-title: The `<em>` Element
-subtitle: Emphasize Written content using the `<em>` element
+title: Emphasize Written Content Using the `<em>` Element
+subtitle: Semantic HTML Basics
 categories: ["HTML", "Shortform"]
 ---
 
-# The `<em>` Element
+# {{title}}
+## {{subtitle}}
+
+**[View this post on Medium](https://medium.com/semantic-html/emphasize-text-and-change-meaning-with-the-em-element-eace4d061440)**
+
 The `<em>` element marks text that is emphasized relative to it's surrounding text, most commonly the contents of a `<p>` tag. In english, there is a lot of semantic meaning contained in what you decide to emphasize, so this tag can substantially change the meaning of the content on your page. Take the following example:
 
 ```html
