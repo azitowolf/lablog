@@ -1,118 +1,85 @@
 ---
-title: Send Data Across the Network with the Form Element
+title: Send Data Across the Network with the `<form>` Element
 metatitle: tinycode | The HTML Form Element
-subtitle: For the Professional Web Developer
+subtitle: Semantic HTML Basics
 categories: ["HTML", "Longform"]
 ---
 
 # {{title}}
-# {{subtitle}}
+## {{subtitle}}
 
-The HTML Form is a very important element in your job at a web developer. Fundamentally, it is the primary tool that you'll have to send data from a web page to a server. A very simple form might look like this
+The HTML Form is a *very* important element in your job at a web developer. It is the primary tool that you'll have to send data from a web page to a server. 
+
+A very simple form might look like this
 
 ```html
 <form>
   <input type="text" />
-  <button action="submit">
+  <button type="submit">submit</button>
 </form>
 ```
 
-The form element provides a couple key functions for you when sending 
+The form element assumes that any buttons with type=submit, or no type assigned (because "submit" is the default type of a button :D ), will submit the form. 
 
-1. It keeps a reference to every input element contained inside it
-2. It groups this content separately from any other form content on the page
-3. It contains the browser interface for sending data across the internet
-
-is a very opinionated wrapper for input elements. 
-
-Nowadays, many frameworks wrap this element with "convenient" abstractions, but the better you understtand the fundsamentals of the element, the better you will be able to decide for yourself if the abstraction provided for you is the simplest or best option.
-
-For example, React.js offers the following example for working with forms:
-
-https://reactjs.org/docs/forms.html
-
-```jsx
-class NameForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {value: ''};
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
-  }
-
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
-    );
-  }
-}
-```
-
+If you had ten buttons inside the form then each of them would trigger it.
 
 ```html
-
-  <body>
-    <form action="test.com" method="post">
-      <p>
-        <label>First name: <input type="text" name="firstname" /></label>
-      </p>
-      <p>
-        <label>Last name: <input type="text" name="lastname" /></label>
-      </p>
-      <p>
-        <label><input type="password" name="pwd" /></label>
-      </p>
-
-      <fieldset name="petfieldset">
-        <legend>Pet preference</legend>
-
-        <p>
-          <label><input type="radio" name="pet" value="cat" /> Cat</label>
-        </p>
-        <p>
-          <label><input type="radio" name="pet" value="dog" /> Dog</label>
-        </p>
-      </fieldset>
-
-      <fieldset>
-        <legend>Owned vehicles</legend>
-
-        <p>
-          <label
-            ><input type="checkbox" name="vehicle" value="Bike" />I have a
-            bike</label
-          >
-        </p>
-        <p>
-          <label
-            ><input type="checkbox" name="vehicle" value="Car" />I have a
-            car</label
-          >
-        </p>
-      </fieldset>
-
-      <p><button role="submit">Submit</button></p>
-    </form>
-  </body>
+<form>
+  <input type="text" />
+  <!-- all of these will cause form to submit -->
+  <button>submit</button>
+  <button>Sign Up Now</button>
+  <button>Leave a Review</button>
+</form>
 ```
 
+## Action and Method
 
+The most important attributes for the form are action and method. 
 
+The action is the location that you want to send your data. When the form is submitted, your web page will attempt to connect to that location on the internet with the information from the form.
+
+The method is the HTTP "verb" (get or post) that you want to use with the form data. You will use a POST if you want to send the data in the form to a location over the internet. You will use a GET primarily for cases where submitting the form is actually redirecting the user back to your web page (generally for adding search filters to your page). For example
+
+```html
+// to post data to an external endpoint
+<form action="/my-data-endpoint/endpoint" method="POST">
+  <input type="text" />
+  <button type="submit">submit</button>
+</form>
+```
+
+```html
+// for internal searches on your own page
+<form action="/" method="GET">
+  <input type="text" />
+  <button type="submit">submit</button>
+</form>
+```
+
+## Other Attributes
+
+Another important attribute is enctype, which specifies the content type that is contained in the form. If you are sending only text data you should use the default value, application/x-www-form-urlencoded. If you are sending files or images over the wire you need to use multipart/form-data.   
+
+Finally, you can specify the target of the form submission, in the same way that you can for a link. The common values here are _self (default): Load into the same browsing context as the current one.
+_blank: Load into a new unnamed browsing context.
+
+# Validation Using Forms
+
+The form element contains everything you need for form validation through the `<input>` element. You can define validation rules on the input elements within the form. For example:
+
+```html
+<form>
+  <input type="tel" pattern="[0-9]{10}" />
+  <button type="submit">submit</button>
+</form>
+```
+The form will then be considered 'invalid' if the condition on that field are not met. You can do simple validation like minLength and maxlength as well as much more advanced validation using regular expressions https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions. 
+
+![invalid](/img/2022-09-20-23-35-07.png)
+
+The default styles are very solid (seen above), but you can also use the :valid and :invalid CSS pseudo-classes to style a <form> element based on whether or not the elements inside the form are valid.
+
+https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
 
 

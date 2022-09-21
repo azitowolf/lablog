@@ -7,7 +7,7 @@ signoff: false
 
 # tinycode
 
-Hi, I'm Alex Zito, a web developer and blogger with more than 10 years experience in the industry.
+Hi, I'm [Alex Zito](https://medium.com/@tinycode), a web developer and blogger with more than 10 years experience in the industry.
 
 My goal is to help software developers become proficient with the most basic and fundamental Web Technology, HTML. Too many web developers make it too far into their careers without becoming competent HTML authors, and I'd like to change that. 
 

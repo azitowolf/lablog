@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <title>tinycode | Forms vs. Frameworks</title>
+</head>
+
+<body>
+    
+    <main>
+        <h1>Forms vs. Frameworks</h1>
+<p>Nowadays, many frameworks wrap this element with convenient abstractions, but the better you understtand the fundsamentals of the element, the better you will be able to decide for yourself if the abstraction provided for you is the simplest or best option.</p>
+<p>For example, React.js offers the following example for working with forms:</p>
+<p>https://reactjs.org/docs/forms.html</p>
+<pre><code class="language-jsx">class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      &lt;form onSubmit={this.handleSubmit}&gt;
+        &lt;label&gt;
+          Name:
+          &lt;input type=&quot;text&quot; value={this.state.value} onChange={this.handleChange} /&gt;
+        &lt;/label&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+      &lt;/form&gt;
+    );
+  }
+}
+</code></pre>
+<pre><code class="language-html">  &lt;form id=&quot;form2&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;name&quot;/&gt;
+    &lt;button type=&quot;submit&quot;&gt;submit&lt;/button&gt;
+  &lt;/form&gt;
+  &lt;script&gt;
+    form2.addEventListener('submit', (event) =&gt; {
+    let formData = new FormData(form2);
+    alert(formData.get('name'))
+  })
+  &lt;/script&gt;
+</code></pre>
+<pre><code class="language-html"> &lt;body&gt;
+    &lt;form action=&quot;test.com&quot; method=&quot;post&quot;&gt;
+      &lt;p&gt;
+        &lt;label&gt;First name: &lt;input type=&quot;text&quot; name=&quot;firstname&quot; /&gt;&lt;/label&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        &lt;label&gt;Last name: &lt;input type=&quot;text&quot; name=&quot;lastname&quot; /&gt;&lt;/label&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        &lt;label&gt;&lt;input type=&quot;password&quot; name=&quot;pwd&quot; /&gt;&lt;/label&gt;
+      &lt;/p&gt;
+
+      &lt;fieldset name=&quot;petfieldset&quot;&gt;
+        &lt;legend&gt;Pet preference&lt;/legend&gt;
+
+        &lt;p&gt;
+          &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;pet&quot; value=&quot;cat&quot; /&gt; Cat&lt;/label&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+          &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;pet&quot; value=&quot;dog&quot; /&gt; Dog&lt;/label&gt;
+        &lt;/p&gt;
+      &lt;/fieldset&gt;
+
+      &lt;fieldset&gt;
+        &lt;legend&gt;Owned vehicles&lt;/legend&gt;
+
+        &lt;p&gt;
+          &lt;label
+            &gt;&lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;Bike&quot; /&gt;I have a
+            bike&lt;/label
+          &gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+          &lt;label
+            &gt;&lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;Car&quot; /&gt;I have a
+            car&lt;/label
+          &gt;
+        &lt;/p&gt;
+      &lt;/fieldset&gt;
+
+      &lt;p&gt;&lt;button role=&quot;submit&quot;&gt;Submit&lt;/button&gt;&lt;/p&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+</code></pre>
+
+        
+            <i>Thanks For Reading,</i>
+</br>
+<i>And for taking a step toward becoming a better HTML Author</i>
+        
+    </main>
+    
+    
+    <script type="text/javascript" src="/scripts/appInsights.js"></script>
+    <script type="text/javascript" src="/scripts/prism.js"></script>
+</body>
+</html>
