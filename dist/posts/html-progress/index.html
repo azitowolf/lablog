@@ -4,39 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/prism.css">
-    <title>tinycode | The &lt;progress&gt; Element</title>
+    <title>tinycode | The &lt;progress&gt; Element | tinycode</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=gambetta@400&f[]=general-sans@600&display=swap" rel="stylesheet">
+    <link rel="canonical" href=/posts/html-progress/>
 </head>
 
 <body>
     
     <main>
+        <p><i>View this post on <a href=/posts/html-progress/>Medium.com</a></i></p>
         <h1>The <code>&lt;progress&gt;</code> Element</h1>
 <h2>Describe Ranges using the The <code>&lt;meter&gt;</code> Element</h2>
-<p>The <a href="https://html.spec.whatwg.org/#the-meter-element">meter element</a> is used to markup a value that falls within a range, and has an optimum value.</p>
-<p>The tag is rendered as a scalar bar, similar to the progress element.</p>
+<p>The <a href="https://html.spec.whatwg.org/#the-meter-element">progress element</a> is used to markup a value that is either progressing from one value to another, or indicating an unknown amount of progress.</p>
+<p>The tag is rendered as a scalar bar, similar to the <a href="./html-meter">meter element</a>.</p>
 <p>For example, the following HTML</p>
-<p>He got a 20% score <meter min="0" low="30" high="70" max="100"
-  value="20" optimum="100">20%</meter> on the exam.</p>
+<pre><code class="language-html">&lt;progress id=&quot;file&quot; max=&quot;100&quot; value=&quot;25&quot;&gt; 70% &lt;/progress&gt;
+</code></pre>
 <p>produces the following meter in Chrome:</p>
+<p><img src="/img/2022-09-30-15-02-46.png" alt=""></p>
+<p>The element has default styles but custom styles can also be applied using CSS property accent-color.</p>
+<pre><code class="language-css">progress {
+  accent-color: coral;
+}
+</code></pre>
+<p><img src="../img/2022-09-30-15-24-24.png" alt=""></p>
+<p>Finally, if the 'value' attribute is not set, the element will return a spinner bar, indicating that some unknown amount of progress is being made.</p>
 <h1>How to use the meter element</h1>
-<p>The element can be used to denote many types of range values. Scores on a test, energy efficiency, cost comparisons, disk usage, or product rating values. Again, any scalar value that is static.</p>
-<p>This is distionctly different from the <code>progress</code> element, which marks up content that is progressing from one discrete value to a finished value.</p>
-<h1>Meter Element Content Categories</h1>
-<p>The meter element is considered phrasing content, defined as &quot;the text of the document&quot; and can be used anywhere in the document body where phrasing content is expected. That includes inside header tags, paragraph tags, and any other tag whose 'content model' contains phrasing content.</p>
-<p>It is also &quot;lebelable&quot; content, which is a small subcategory of HTML elements that can be associated with a label element. This list includes: <button>, <input>, <keygen> Deprecated, <meter>, <output>, <progress>, <select>, and <textarea>.</p>
+<p>The element can be used to denote progress (known or unknown) along any sort of continuous range, like a file upload, a form completion, or a character level.</p>
+<p>This is distinctly different from the <code>meter</code> element, which marks up content that falls within a range, and has an optimum value.</p>
+<h1>Attributes</h1>
+<p>The bar has two unique attributes, max, and value.</p>
+<ol>
+<li>max defines the maximum value for which progress will be scaled</li>
+<li>value defines the value that the progress bar should show</li>
+</ol>
+<p>The bar will automatically adjust the progress meter based on these two attributes. For example, if the value is still &quot;25&quot; but the max is only 30, then the bar will render differently.</p>
+<p><img src="../img/2022-09-30-15-12-17.png" alt=""></p>
+<h1>Progress Element Content Categories</h1>
+<p>The progress element is considered phrasing content, defined as &quot;the text of the document&quot; and can be used anywhere in the document body where phrasing content is expected. That includes inside header tags, paragraph tags, and any other tag whose 'content model' contains phrasing content.</p>
+<p>It is also &quot;labelable&quot; content, which is a small subcategory of HTML elements that can be associated with a label element. This list includes: <button>, <input>, <keygen> Deprecated, <meter>, <output>, <progress>, <select>, and <textarea>.</p>
 
         
-            <i>Thanks For Reading,</i>
-</br>
-<i>And for taking a step toward becoming a better HTML Author</i>
+            
+<br />
+<h3>
+    <b>
+        Thanks for reading. If you like my stories and want to support me, 
+        please consider <a href="https://tinycode.medium.com/about">subscribing to recieve email notifications for my stories</a>. 
+    </b>
+</h3>
         
     </main>
     
     
     <script type="text/javascript" src="/scripts/appInsights.js"></script>
     <script type="text/javascript" src="/scripts/prism.js"></script>
+    <script type="text/javascript" src="/scripts/copyToClipboard.js"></script>
 </body>
 </html>

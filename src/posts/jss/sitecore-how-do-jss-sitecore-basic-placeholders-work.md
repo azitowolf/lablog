@@ -1,5 +1,5 @@
 ---
-metatitle: tinycode | Sitecore JSS Inline Placeholders
+metatitle: Sitecore JSS Inline Placeholders | tinycode 
 title: Sitecore JSS Inline Placeholders
 subtitle: How Basic Placeholders Work in React JSS
 categories: ["Sitecore", "JSS", "Shortform"]

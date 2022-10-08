@@ -4,23 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {# <style>{% include "css/prism.css" %}</style> #}
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/prism.css">
-    <title>{{metatitle}}</title>
+    <title>{{metatitle + " | tinycode"}}</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=gambetta@400&f[]=general-sans@600&display=swap" rel="stylesheet">
+    <link rel="canonical" href={{mediumurl if mediumurl else page.url}}>
 </head>
 
 <body>
     
     <main>
+        <p><i>View this post on <a href={{mediumurl if mediumurl else page.url}}>Medium.com</a></i></p>
         {{content | safe}}
         {% if signoff %}
-            {% include "./signoff.md" %}
+            {% include "./signoff.njk" %}
         {% endif  %}
     </main>
     
     {# Scripts Section #}
     <script type="text/javascript" src="/scripts/appInsights.js"></script>
     <script type="text/javascript" src="/scripts/prism.js"></script>
+    <script type="text/javascript" src="/scripts/copyToClipboard.js"></script>
 </body>
 </html>

@@ -1,27 +1,28 @@
-@font-face {
-    font-family: 'PTSans';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/PTSans-Regular.ttf');
+:root {
+    --button-color: #CFDBD5;
+    --background-color: #E8EDDF;
+    --link-color: #0099ff;
+    --primary-font: 'Gambetta', sans-serif;
+    --secondary-font: 'General Sans', sans-serif;
 }
-
-/* Based on http://kevinburke.bitbucket.org/markdowncss/ */
 
 html {
     font-size: calc(20/16 * 1rem);
 }
+
 body{
     margin: 0 auto;
-    font-family: 'PTSans', Palatino, serif;
+    font-family: var(--primary-font), Palatino, serif;
     font-weight: 400;
     color: #444444;
     line-height: 1;
     max-width: 700px;
     padding: 30px;
+    font-display: swap;
 }
 h1, h2, h3, h4 {
     font-weight: 400;
-    font-family: Georgia, Palatino, serif;
+    font-family: var(--secondary-font), Palatino, serif;
 }
 h1, h2, h3, h4, h5, p {
     margin-bottom: 1rem;
@@ -33,9 +34,12 @@ main h1:first-child {
 h1 {
     font-size: 2rem;
 }
+h1 code, h2 code {
+    font-family: inherit;
+    font-size: inherit;
+}
 h1 + h2 {
     color:grey;
-    font-family: 'PTSans', Palatino, serif;
 }
 h2 {
     font-size: 1.5rem;
@@ -51,7 +55,7 @@ h5 {
     font-size: 1rem;
 }
 a {
-    color: #0099ff;
+    color: var(--link-color);
     margin: 0;
     padding: 0;
     vertical-align: baseline;
@@ -76,6 +80,7 @@ pre {
     max-width: 100%;
     white-space: pre-wrap;
     font-size: 0.7rem!important;
+    position: relative;
 }
 pre[class*=language-]:before, 
 pre[class*=language-]:after {
@@ -122,7 +127,7 @@ table td {
     padding: 0.5em 1em;
     border: 1px solid #CCC;
 }
-img {
+img, pre {
     border: 2px solid #353839;
     max-width: 100%;
 }
@@ -136,4 +141,17 @@ header {
     padding: 0.1rem 0.25rem;
     background-color: blanchedalmond;
     border-radius: 5px;
+}
+
+.copy-button {
+    all: unset;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: var(--button-color);
+    padding: 0.1rem 0.5rem;
+}
+
+pre[class*=language-] {
+    background: #eee!important;
 }

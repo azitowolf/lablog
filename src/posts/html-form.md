@@ -3,6 +3,7 @@ title: Send Data Across the Network with the `<form>` Element
 metatitle: tinycode | The HTML Form Element
 subtitle: Semantic HTML Basics
 categories: ["HTML", "Longform"]
+mediumurl: https://medium.com/weekly-webtips/send-data-across-the-network-with-the-form-element-291453f0d41f
 ---
 
 # {{title}}

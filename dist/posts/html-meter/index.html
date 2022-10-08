@@ -4,52 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/prism.css">
-    <title>tinycode | The &lt;meter&gt; Element</title>
+    <title>tinycode | Describe Scores, Comparisons + Ranges Using The &lt;meter&gt; Element | tinycode</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=gambetta@400&f[]=general-sans@600&display=swap" rel="stylesheet">
+    <link rel="canonical" href=https://tinycode.medium.com/describe-scores-comparisons-ranges-using-the-meter-element-9dd5650788e5>
 </head>
 
 <body>
     
     <main>
-        <h1>The <code>&lt;meter&gt;</code> Element</h1>
-<h2>Describe Ranges using the The <code>&lt;meter&gt;</code> Element</h2>
+        <p><i>View this post on <a href=https://tinycode.medium.com/describe-scores-comparisons-ranges-using-the-meter-element-9dd5650788e5>Medium.com</a></i></p>
+        <h1>Describe Scores, Comparisons + Ranges Using The <code>&lt;meter&gt;</code> Element</h1>
+<h2>Semantic HTML Basics</h2>
 <p>The <a href="https://html.spec.whatwg.org/#the-meter-element">meter element</a> is used to markup a value that falls within a range, and has an optimum value.</p>
 <p>The tag is rendered as a scalar bar, similar to the progress element.</p>
-<p>For example, the following HTML</p>
-<p>He got a 20% score <meter min="0" low="30" high="70" max="100"
-  value="20" optimum="100">20%</meter> on the exam.</p>
-<p>produces the following meter in Chrome:</p>
-<p>Internally, the element creates 3 different ranges within the maximum and minimum values, based on the low and high values and the values in between. In the example above there would be 3 ranges registered by the element:</p>
+<p>For example, the following HTML produces the meter below in Chrome v105:</p>
+<pre><code class="language-html">&lt;p&gt;He got a 20% score 
+  &lt;meter min=&quot;0&quot; low=&quot;30&quot; high=&quot;70&quot; max=&quot;100&quot;value=&quot;20&quot; optimum=&quot;100&quot;&gt;
+    20%
+  &lt;/meter&gt; 
+  on the exam.&lt;/p&gt;
+</code></pre>
+<p><img src="/img/2022-10-07-19-22-25.png" alt=""></p>
+<h1>How Does The <code>&lt;meter&gt;</code> Work?</h1>
+<p>Internally, the element creates 3 different ranges within the maximum and minimum values, based on the low and high values, and the values inbetween. In the example above there would be 3 ranges registered by the element:</p>
 <ol>
 <li>0-30</li>
 <li>30-70</li>
 <li>70-100</li>
 </ol>
 <p>The element then styles the bar based on how close the actual value is to the &quot;optimum&quot; value.</p>
+<h2>The Optimum Value</h2>
 <p>The 'optimum' value of the range element is considered to be the maximum value unless otherwise specified. If you specify the optimum value to be somewhere else in the bar then the bar will register the red, green and yellow statuses differently.</p>
-<p>For example if I change the optimum value of the above meter to 0 like so <code>optimum=&quot;0&quot;</code>, then the element processes the status of the bar differently.</p>
+<p>For example if I change the optimum value of the above meter to 0 like so <code>optimum=&quot;0&quot;</code>, then the element processes the status of the bar differently. Now the score of 20 is actually in the most optimum range!</p>
+<p><img src="/img/2022-10-07-19-27-01.png" alt=""></p>
 <p>The properties of the meter element can also be modified with javascript, like so:</p>
 <pre><code class="language-js">let meterElement = document.querySelector('meter');
 meterElement.optimum = 50;
 </code></pre>
-<h1>How to use the meter element</h1>
+<h1>How to Use The <code>&lt;meter&gt;</code> Element</h1>
 <p>The element can be used to denote many types of range values. Scores on a test, energy efficiency, cost comparisons, disk usage, or product rating values. Again, any scalar value that is static.</p>
 <p>The meter element is distionctly different from the <code>progress</code> element, which marks up content that is progressing from one discrete value to a finished value.</p>
 <h1>Meter Element Content Categories</h1>
 <p>The meter element is considered phrasing content, defined as &quot;the text of the document&quot; and can be used anywhere in the document body where phrasing content is expected. That includes inside header tags, paragraph tags, and any other tag whose 'content model' contains phrasing content.</p>
-<p>It is also &quot;lebelable&quot; content, which is a small subcategory of HTML elements that can be associated with a label element. This list includes: <button>, <input>, <keygen> Deprecated, <meter>, <output>, <progress>, <select>, and <textarea>.</p>
+<p>It is also &quot;labelable&quot; content, which is a small subcategory of HTML elements that can be associated with a label element. This list includes: <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;meter&gt;</code>, <code>&lt;output&gt;</code>, <code>&lt;progress&gt;</code>, <code>&lt;select&gt;</code>, and <code>&lt;textarea&gt;</code>.</p>
 
         
-            <i>Thanks For Reading,</i>
-</br>
-<i>And for taking a step toward becoming a better HTML Author</i>
+            
+<br />
+<h3>
+    <b>
+        Thanks for reading. If you like my stories and want to support me, 
+        please consider <a href="https://tinycode.medium.com/about">subscribing to recieve email notifications for my stories</a>. 
+    </b>
+</h3>
         
     </main>
     
     
     <script type="text/javascript" src="/scripts/appInsights.js"></script>
     <script type="text/javascript" src="/scripts/prism.js"></script>
+    <script type="text/javascript" src="/scripts/copyToClipboard.js"></script>
 </body>
 </html>
