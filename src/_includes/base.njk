@@ -14,7 +14,7 @@
 <body>
     
     <main>
-        <p><i>View this post on <a href={{mediumurl if mediumurl else page.url}}>Medium.com</a></i></p>
+        {% if mediumurl %}<p><i>View this post on <a href={{mediumurl}}>Medium.com</a></i></p>{% endif  %}
         {{content | safe}}
         {% if signoff %}
             {% include "./signoff.njk" %}

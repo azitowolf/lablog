@@ -1,8 +1,9 @@
 ---
-metatitle: tinycode | How To Read the HTML Spec
-title: How To Read the HTML Spec
-subtitle: A guide for Web Developers
+metatitle: How To Read the HTML Specification | tinycode
+title: How To Read the HTML Specification
+subtitle: A Guide For Web Developers
 categories: ["HTML", "Longform"]
+mediumurl: https://medium.com/weekly-webtips/how-to-read-the-html-spec-da54ca73513a
 ---
 
 # {{title}}

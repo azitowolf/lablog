@@ -13,9 +13,6 @@ My goal is to help software developers become proficient with the most basic and
 
 If this is your first time here, I suggest reading "[How to Read the HTML Specification](/posts/html-how-to-read-the-spec/)" and then [give it a shot](https://html.spec.whatwg.org/) yourself. Then you can view some of the individual posts about specific elements, or you can take a look at the [cheat sheets](/posts/cheat-sheets) that I've been working on to help people master HTML.
 
-<!-- TODO: ORDER BY DATE PUBLISHED -->
-<!-- TODO: show only html posts in main view -->
-
-[Browse All My Posts](/browse-posts/)
+[Browse All My Posts](/posts/browse/)
 
 [View the Cheat Sheets](/posts/cheat-sheets) (Work in Progress)
