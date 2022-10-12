@@ -2,7 +2,7 @@
 title: The JS Cheatsheet
 metatitle: tinycode | The JS Cheatsheet
 subtitle: For the Professional Web Developer
-categories: ["test"]
+categories: ["cheatsheet", "js"]
 ---
 
 # {{title}}
