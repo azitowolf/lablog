@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <title>Tell Users How to Interact With Your Site Using the `&lt;kbd&gt;` Element | tinycode | tinycode</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=gambetta@400&f[]=general-sans@600&display=swap" rel="stylesheet">
+    <link rel="canonical" href=https://medium.com/semantic-html/tell-users-which-actions-are-allowed-with-the-kbd-element-e791907ea61f>
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    
+    <main>
+        <p><i>View this post on <a href=https://medium.com/semantic-html/tell-users-which-actions-are-allowed-with-the-kbd-element-e791907ea61f>Medium.com</a></i></p>
+        <h1>Tell Users How to Interact With Your Site Using the <code>&lt;kbd&gt;</code> Element</h1>
+<h2>Semantic HTML Basics</h2>
+<p>The <code>&lt;kbd&gt;</code> element represents expected user input into the webpage. For example:</p>
+<p>To print your screen, press <code>&lt;k&gt;</code>ctrl<code>&lt;/k</code>bd&gt; + <code>&lt;k&gt;</code>alt<code>&lt;/k</code>bd&gt; + <code>&lt;k&gt;</code>3<code>&lt;/k</code>bd&gt;
+Produces the following:</p>
+<p><img src="/img/2022-10-11-19-41-29.png" alt=""></p>
+<p>The default style output of this element is a monospace font, though you can add your own custom styles to get something more like this:</p>
+<p><img src="/img/2022-10-11-19-41-11.png" alt=""></p>
+<h1>Common Use Cases</h1>
+<p>The first common use case is to describe keys that the user should press to interact with your webpage. This would be especially important if you are building a “hotkey” page, for example, but it could be used in many scenarios, like a game that needs to explain commands, or a tooltip that shows users how to use your website.</p>
+<p>Another commons use case is with the <code>&lt;samp&gt;</code> element, which represents “echoed” output from a computer. An example of this would look like the following:</p>
+<p>The command that you entered is <code>&lt;samp&gt;``&lt;kbd&gt;</code>exit application<code>&lt;kbd&gt;``&lt;/samp&gt;</code> is this correct?
+You would imagine that there are many cases where you might need to use this format, especially when building more technical applications that need to display computer output and instructions back to the user simultaneously.</p>
+<h1>Special Attributes</h1>
+<p>The <code>&lt;kbd&gt;</code> element takes the “translate” attribute, which tells user agents whether or not this content should be translated. This should be respected by the autotranslate features in major web browsers and is very important because it’s very unlikely that you’ll want to translate computer commands which should be the same across languages. The HTML spec provides this example:</p>
+<p><code>&lt;p&gt;</code>When the game launches, press the <code>&lt;kbd translate=no&gt;enter&lt;/kbd&gt;</code> key to spawn your character.<code>&lt;/p&gt;</code></p>
+<h1>Categories</h1>
+<p>The <code>&lt;kbd&gt;</code> element is primarily phrasing content, though it also falls into “flow” and “palpable” categories with most other elements. This means that it is most likely used inside of a<code>&lt;p&gt;</code> element as part of a paragraph of text.</p>
+
+        
+<br />
+<h3>
+    <b>
+        Thanks for reading. If you like my stories and want to support me, 
+        please consider <a href="https://tinycode.medium.com/about">subscribing to recieve email notifications for my stories</a>. 
+    </b>
+</h3>
+    </main>
+    
+    
+    <script type="text/javascript" src="/scripts/appInsights.js"></script>
+    <script type="text/javascript" src="/scripts/prism.js"></script>
+    <script type="text/javascript" src="/scripts/copyToClipboard.js"></script>
+</body>
+</html>

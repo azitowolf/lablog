@@ -1,5 +1,8 @@
 ---
 layout: base.njk
+signoff: false
+index: true
+metatitle: Browse Posts | tinycode
 ---
 
 # Browse Posts

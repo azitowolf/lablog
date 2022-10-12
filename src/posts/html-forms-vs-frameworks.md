@@ -1,9 +1,14 @@
 ---
 title: Forms vs. Frameworks
-metatitle: tinycode | Forms vs. Frameworks
 subtitle: For the Professional Web Developer
+metatitle: Forms vs. Frameworks | tinycode 
 categories: ["HTML", "Longform"]
+mediumurl: 
 ---
+
+# WIP
+# {{title}}
+## {{subtitle}}
 
 form element
 1. It keeps a reference to every input element contained inside it

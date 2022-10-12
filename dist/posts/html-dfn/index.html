@@ -8,20 +8,33 @@
     <link rel="stylesheet" href="/css/prism.css">
     <title>tinycode | Describe Scores, Comparisons + Ranges Using The &lt;meter&gt; Element | tinycode</title>
     <link href="https://api.fontshare.com/v2/css?f[]=gambetta@400&f[]=general-sans@600&display=swap" rel="stylesheet">
-    <link rel="canonical" href=https://tinycode.medium.com/describe-scores-comparisons-ranges-using-the-meter-element-9dd5650788e5>
+    <link rel="canonical" href=https://medium.com/semantic-html/tell-users-which-actions-are-allowed-with-the-kbd-element-e791907ea61f>
 </head>
 
 <body>
     
     <main>
-        <p><i>View this post on <a href=https://tinycode.medium.com/describe-scores-comparisons-ranges-using-the-meter-element-9dd5650788e5>Medium.com</a></i></p>
-        <p>The HTML <dfn> element is a text element that’s used to indicate a definition (a word and then its meaning) in your text content.</p>
-<p>Generally speaking, the text in the <dfn> tag is the text that’s being defined. However, if you want to use a modified version of the defined text instead of the definition itself, the <abbr> element’s title attribute can be substituted as the text to be defined.</p>
-<p>For example:</p>
-<p>As with all of the text semantics elements, the dfn element is rendered inline and expect only text (or an abbr element) as a child.</p>
+        <p><i>View this post on <a href=https://medium.com/semantic-html/tell-users-which-actions-are-allowed-with-the-kbd-element-e791907ea61f>Medium.com</a></i></p>
+        <h1>Describe Scores, Comparisons + Ranges Using The <code>&lt;meter&gt;</code> Element</h1>
+<h2>Semantic HTML Basics</h2>
+<p>The <code>&lt;kbd&gt;</code> element represents expected user input into the webpage. For example:</p>
+<p>To print your screen, press <code>&lt;k&gt;</code>ctrl<code>&lt;/k</code>bd&gt; + <code>&lt;k&gt;</code>alt<code>&lt;/k</code>bd&gt; + <code>&lt;k&gt;</code>3<code>&lt;/k</code>bd&gt;
+Produces the following:</p>
+<p><img src="/img/2022-10-11-19-41-29.png" alt=""></p>
+<p>The default style output of this element is a monospace font, though you can add your own custom styles to get something more like this:</p>
+<p><img src="/img/2022-10-11-19-41-11.png" alt=""></p>
+<h1>Common Use Cases</h1>
+<p>The first common use case is to describe keys that the user should press to interact with your webpage. This would be especially important if you are building a “hotkey” page, for example, but it could be used in many scenarios, like a game that needs to explain commands, or a tooltip that shows users how to use your website.</p>
+<p>Another commons use case is with the <code>&lt;samp&gt;</code> element, which represents “echoed” output from a computer. An example of this would look like the following:</p>
+<p>The command that you entered is <code>&lt;samp&gt;``&lt;kbd&gt;</code>exit application<code>&lt;kbd&gt;``&lt;/samp&gt;</code> is this correct?
+You would imagine that there are many cases where you might need to use this format, especially when building more technical applications that need to display computer output and instructions back to the user simultaneously.</p>
+<h1>Special Attributes</h1>
+<p>The <code>&lt;kbd&gt;</code> element takes the “translate” attribute, which tells user agents whether or not this content should be translated. This should be respected by the autotranslate features in major web browsers and is very important because it’s very unlikely that you’ll want to translate computer commands which should be the same across languages. The HTML spec provides this example:</p>
+<p><code>&lt;p&gt;</code>When the game launches, press the <code>&lt;kbd translate=no&gt;enter&lt;/kbd&gt;</code> key to spawn your character.<code>&lt;/p&gt;</code></p>
+<h1>Categories</h1>
+<p>The <code>&lt;kbd&gt;</code> element is primarily phrasing content, though it also falls into “flow” and “palpable” categories with most other elements. This means that it is most likely used inside of a<code>&lt;p&gt;</code> element as part of a paragraph of text.</p>
 
         
-            
 <br />
 <h3>
     <b>
@@ -29,7 +42,6 @@
         please consider <a href="https://tinycode.medium.com/about">subscribing to recieve email notifications for my stories</a>. 
     </b>
 </h3>
-        
     </main>
     
     

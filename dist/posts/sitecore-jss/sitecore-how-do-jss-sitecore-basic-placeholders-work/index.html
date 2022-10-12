@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <title>Sitecore JSS Inline Placeholders | tinycode | tinycode</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=gambetta@400&f[]=general-sans@600&display=swap" rel="stylesheet">
+    <link rel="canonical" href=/posts/sitecore-jss/sitecore-how-do-jss-sitecore-basic-placeholders-work/>
+</head>
+
+<body>
+    
+    <main>
+        
+        <h1>Sitecore JSS Inline Placeholders</h1>
+<h2>How Basic Placeholders Work in React JSS</h2>
+<p><a href="https://www.codehousegroup.com/insight-and-inspiration/tech-stream/sitecore-headless-and-jss-what-does-it-all-mean">Sitecore JSS</a> is a framework for building rendering applications for the <a href="https://www.sitecore.com/">Sitecore</a> Content Management System.</p>
+<p>Some CMSes that consider themselves ‘headless’ provide no framework for controlling the layout of your pages via content, but Sitecore maintains tight control over how the layout of a page comes out. The primary way that they do so is through placeholders.</p>
+<p><img src="https://images.unsplash.com/photo-1658454153721-d47b47afc96f?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2231&amp;q=80" alt="image"></p>
+<h1>Placeholders</h1>
+<p>Placeholders are tagged locations in your JSX/HTML where you plan to allow content editors to add their own renderings, thereby allowing non-technical content editors to create and customize pages.</p>
+<p>There are 3 ways to use a placeholder in JSS, and I’m covering the first one in this article, the basic method.</p>
+<h1>Basic Placeholders in React JSS</h1>
+<p>The basic method is essentially to import a react component called “placeholder” from the Sitecore JSS library, and add it directly into the react component. The example from the Sitecore official documentation shows this example:</p>
+<pre><code class="language-js">import { Placeholder } from '@sitecore-jss/sitecore-jss-nextjs';
+
+const App = ({ rendering }) =&gt; (
+  &lt;div&gt;
+    &lt;h1&gt;My App&lt;/h1&gt;
+    &lt;Placeholder name=&quot;jss-main&quot; rendering={rendering} /&gt;
+  &lt;/div&gt;
+)
+</code></pre>
+<blockquote>
+<p>Of course, in keeping with the rest of Sitecore’s documentation, this is just about 30% of what you need to know to actually use this component in any meaningful way.</p>
+</blockquote>
+<p>The props that are handed to any rendering in JSS contain the rendering information for that rendering ONLY. You will not be able to access the rendering information for any other renderings if you pass in the rendering this way.</p>
+<p>For example, using the rendering as the ‘rendering’ prop of the placeholder is really useless because you are just passing the rendering data for Appback into the placeholder inside App.</p>
+<p><code>const App = ({ rendering }) =&gt; (</code></p>
+<p>A more common use case is to want to render two child components in a layout, like so:</p>
+<pre><code class="language-js">const BlogPage = (props): JSX.Element =&gt; {
+  return (
+    &lt;section className=&quot;blog-page&quot;&gt;
+      &lt;Placeholder name=&quot;blog-page-header&quot; rendering={route}/&gt;
+      &lt;Placeholder name=&quot;blog-page-content&quot; rendering={route} /&gt;
+    &lt;/section&gt;
+  );
+};
+</code></pre>
+<p>To access and render other the other components of the components above into the corresponding placeholders you will need to:</p>
+<ol>
+<li>
+<p>Export the app component with a special “HOC” wrapper that adds the Sitecore context data to the like so: <code>const AppWithContext = withSitecoreContext()(App);</code> after this, the props passed to the rendering will include the sitecore context object.</p>
+</li>
+<li>
+<p>read that data in your component const route = props.sitecoreContext.route;
+and then pass it into the placeholder as the rendering: <code>&lt;Placeholder name=”jss-main” rendering={rendering} /&gt;</code></p>
+</li>
+<li>
+<p>Finally, you will need to actually create and add a “placeholder” item to the layout that you are using, in the Sitecore content editor. The placeholder list for the layout acts as a filter, so if you do not add this, the data for the placeholder you are trying to use will be blocked.</p>
+</li>
+</ol>
+<p>After completing the above your code should look something like this:</p>
+<pre><code class="language-js">
+import { withSitecoreContext } from 'sitecore/lib';
+
+const BlogPage = (props): JSX.Element =&gt; {
+
+  // Without the 'withSitecoreContext' HOC call, 
+  // props.sitecoreContext is undefined
+  const  route  = props.sitecoreContext.route;
+  
+  return (
+    &lt;section className=&quot;blog-page&quot;&gt;
+      &lt;Placeholder name=&quot;blog-page-header&quot; rendering={route}/&gt;
+      &lt;Placeholder name=&quot;blog-page-content&quot; rendering={route} /&gt;
+    &lt;/section&gt;
+    );
+};
+
+export default withsitecoreContext()(BlogPage)
+</code></pre>
+<p>Now, you will be able to add the two components — <code>BlogPageHeader</code> + <code>BlogPageContent</code> (not depicted here) to the presentation details for the page in question, and render them into the placeholders above.</p>
+<p>I hope that this article helps to ‘supplement’ the existing Sitecore JSS documentation so that those developers who come after me can learn a bit faster and suffer a bit less.</p>
+
+        
+<br />
+<h3>
+    <b>
+        Thanks for reading. If you like my stories and want to support me, 
+        please consider <a href="https://tinycode.medium.com/about">subscribing to recieve email notifications for my stories</a>. 
+    </b>
+</h3>
+    </main>
+    
+    
+    <script type="text/javascript" src="/scripts/appInsights.js"></script>
+    <script type="text/javascript" src="/scripts/prism.js"></script>
+    <script type="text/javascript" src="/scripts/copyToClipboard.js"></script>
+</body>
+</html>

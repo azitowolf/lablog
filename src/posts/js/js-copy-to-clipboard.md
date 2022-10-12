@@ -2,6 +2,7 @@
 title: How to Copy to Clipboard using the 'navigator.clipboard' API
 subtitle: Vanilla JS
 categories: ["JS", "Shortform"]
+mediumurl: https://tinycode.medium.com/copy-text-to-a-users-clipboard-using-the-navigator-clipboard-api-77942ef813f2
 ---
 
 # {{title}}

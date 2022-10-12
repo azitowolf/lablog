@@ -1,8 +1,9 @@
 ---
-metatitle: tinycode | The <progress> Element
+metatitle: The <progress> Element | tinycode
 title: The `<progress>` Element
-subtitle: Describe Ranges using the The `<meter>` Element
+subtitle: Describe Ranges using the The `<progress>` Element
 layout: base.njk
+mediumurl: https://medium.com/weekly-webtips/the-progress-element-e7c2b7d0054f
 ---
 
 # {{title}}

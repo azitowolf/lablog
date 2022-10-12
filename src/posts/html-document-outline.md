@@ -1,8 +1,9 @@
 ---
 title: The HTML Document Outline
 metatitle: tinycode | The HTML Document Outline
-subtitle: An Essential Topic in Semantic HTML
+subtitle: Semantic HTML Basics
 categories: ["HTML", "Longform"]
+mediumurl: https://tinycode.medium.com/the-html-document-outline-c613cc2fc80d
 ---
 
 # {{title}}

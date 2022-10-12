@@ -1,8 +1,8 @@
 ---
 title: The Software Industry is Shrinking
-metatitle: tinycode | The Software Industry is Shrinking
+metatitle: The Software Industry is Shrinking | tinycode
 subtitle: It's Time to Specialize or Be Cut
-mediumurl: https://medium.com/p/d49f817897c7/edit
+mediumurl: https://medium.com/p/d49f817897c7
 ---
 
 # {{title}}

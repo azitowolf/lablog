@@ -3,6 +3,7 @@ metatitle: tinycode | The <strong> Element
 title: The `<strong>` Element
 subtitle: Indicate Importance using the `<strong>` element
 categories: ["HTML", "Shortform"]
+mediumurl: https://medium.com/semantic-html/show-readers-what-matters-using-the-strong-element-a1dd84d9bd47
 ---
 # {{title}}
 ## {{subtitle}}
